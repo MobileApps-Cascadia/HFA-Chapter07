@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         //TODO: Refactor for RecyclerView
-        setContentView(R.layout.activity_main_recyclerview);
+        setContentView(R.layout.activity_main);
 
         //Data stored in a String[]
         String[] myDataArray = new String[] {"Java", "Kotlin", "Swift", "Objective C"};
