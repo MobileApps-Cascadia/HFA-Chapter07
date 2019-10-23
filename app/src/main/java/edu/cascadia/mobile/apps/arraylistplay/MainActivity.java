@@ -1,8 +1,12 @@
 package edu.cascadia.mobile.apps.arraylistplay;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -12,26 +16,20 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //TODO: Refactor for RecyclerView
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_recyclerview);
 
         //Data stored in a String[]
-        String[] myDataArray = new String[] {"Java", "Kotlin", "Swift", "Objective C"};
+        String[] myDataArray = new String[] {"Java", "Kotlin", "Swift", "Objective C", "Python", "Javascript", "Ruby", "Node", "Java", "Kotlin", "Swift", "Objective C", "Python", "Javascript", "Ruby", "Node", "Java", "Kotlin", "Swift", "Objective C", "Python", "Javascript", "Ruby", "Node"};
 
-        //TODO: Refactor for RecyclerView
-        //Create an adapter
-        ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(
-                this,
-                android.R.layout.simple_list_item_1,
-                myDataArray
-        );
+        //create constructor for string array adapter
+        RecyclerView.Adapter<StringArrayAdapter.ViewHolder> myAdapter = new StringArrayAdapter(myDataArray);
 
-        //TODO: Refactor for RecyclerView
         //Get a reference to the view using findViewById
-        ListView myListView = (ListView) findViewById(R.id.myListView);
+        RecyclerView myRecyclerView = (RecyclerView) findViewById(R.id.myRecyclerView);
 
-        //TODO: Refactor for RecyclerView
         //Attach the adapter using its setAdapter method
-        myListView.setAdapter(myAdapter);
+        myRecyclerView.setAdapter(myAdapter);
+
+        myRecyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 }
