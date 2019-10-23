@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main_recyclerview);
 
         //Data stored in a String[]
-        String[] myDataArray = new String[] {"Java", "Kotlin", "Swift", "Objective C"};
+        String[] myDataArray = new String[] {"Java", "Kotlin", "Swift", "Objective C", "Python", "HTML", "CSS", "JavaScript"};
 
         //TODO: Refactor for RecyclerView
         //Create an adapter
