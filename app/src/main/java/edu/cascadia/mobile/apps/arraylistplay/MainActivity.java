@@ -36,6 +36,6 @@ public class MainActivity extends AppCompatActivity {
 
         //TODO: Set the RecyclerView's Layout Manager to a new LinearLayoutManager
 
-        //TODO: Add ItemDecorators to the RecyclerView for the lines between items and spacing of 16
+        //TODO: Add ItemDecoration to the RecyclerView for the divider lines and spacing of 16
     }
 }
