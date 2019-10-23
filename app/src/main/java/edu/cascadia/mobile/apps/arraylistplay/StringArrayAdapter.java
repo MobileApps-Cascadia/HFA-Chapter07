@@ -1,6 +1,8 @@
 package edu.cascadia.mobile.apps.arraylistplay;
 
 
+import android.text.Layout;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -17,7 +19,8 @@ public class StringArrayAdapter extends RecyclerView.Adapter<StringArrayAdapter.
     //Create required methods for every RecyclerView.Adapter class
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        //TODO: Inflate a new View with the checklist_item xml layout
+        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+        //TODO: use the inflater to inflate a new View of the checklist_item xml layout
 
         //TODO: Use your view to create and return a new ViewHolder
         return new ViewHolder(null ); //Use your view instead of null
@@ -43,7 +46,6 @@ public class StringArrayAdapter extends RecyclerView.Adapter<StringArrayAdapter.
 
         public ViewHolder(View v){
             super(v);
-
             nameTextView = (TextView) v.findViewById(R.id.checklist_item_name);
         }
     }

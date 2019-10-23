@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Data stored in a String[]
-        String[] myDataArray = new String[] {"Java", "Kotlin", "Swift", "Objective C"};
+        String[] myDataArray = new String[] {"Java", "Kotlin", "Swift", "C","Ratfor","C shell/tcsh","C++","AMPL","Objective-C","C*","Perl","Java","S-Lang","SAC","Alef","Limbo","PHP","ECMAScript","C--","C#","Ch","D","eC","Cyclone","LSL","Squirrel","Go","OpenCL C","C0","Swift","AWK","BitC","LPC","Pike","Seed7","Processing","Split-C","Unified Parallel C","Cilk","Chapel","Fortress","Agora","BCPL","B","Nim","Nemerle","ApeScript","Amiga E","Lite-C","Newsqueak","Not eXactly C (NXC)","Not Quite C (NQC)","Oak","PROMAL","Handel-C","Dart","CINT","Cg","R","Hack","Charm","Claire","Noop","Neko","Axum","Umple","TOM (object-oriented programming language)","Telescript","Fantom","nesC","HolyC"};
 
         //TODO: Refactor for RecyclerView
         //Create an adapter
@@ -33,5 +33,9 @@ public class MainActivity extends AppCompatActivity {
         //TODO: Refactor for RecyclerView
         //Attach the adapter using its setAdapter method
         myListView.setAdapter(myAdapter);
+
+        //TODO: Set the RecyclerView's Layout Manager to a new LinearLayoutManager
+
+        //TODO: Add ItemDecorators to the RecyclerView for the lines between items and spacing of 16
     }
 }
