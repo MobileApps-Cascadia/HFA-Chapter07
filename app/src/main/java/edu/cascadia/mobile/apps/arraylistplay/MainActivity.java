@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         //TODO: Refactor for RecyclerView
         //Attach the adapter using its setAdapter method
         recyclerView.setAdapter(myAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
 
 
