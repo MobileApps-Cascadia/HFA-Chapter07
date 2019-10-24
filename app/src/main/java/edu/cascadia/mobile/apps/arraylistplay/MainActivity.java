@@ -1,6 +1,7 @@
 package edu.cascadia.mobile.apps.arraylistplay;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
@@ -14,10 +15,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         //TODO: Refactor for RecyclerView
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_recyclerview);
 
         //Data stored in a String[]
-        String[] myDataArray = new String[] {"Java", "Kotlin", "Swift", "Objective C"};
+        String[] myDataArray = new String[] {"Java", "Kotlin", "Swift", "Objective C", "Python", "Ruby", "C#"};
 
         //TODO: Refactor for RecyclerView
         //Create an adapter
@@ -30,10 +31,11 @@ public class MainActivity extends AppCompatActivity {
 
         //TODO: Refactor for RecyclerView
         //Get a reference to the view using findViewById
-        ListView myListView = (ListView) findViewById(R.id.myListView);
+        RecyclerView myListView = (RecyclerView) findViewById(R.id.recycler);
 
         //TODO: Refactor for RecyclerView
         //Attach the adapter using its setAdapter method
-        myListView.setAdapter(myAdapter);
+        myListView.setAdapter(Adapter);
+
     }
 }
