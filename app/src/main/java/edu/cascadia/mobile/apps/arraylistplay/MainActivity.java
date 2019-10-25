@@ -22,20 +22,18 @@ public class MainActivity extends AppCompatActivity {
 
         //TODO: Refactor for RecyclerView
         //Create an adapter
-        RecyclerView.Adapter<StringArrayAdapter.ViewHolder> Adapter = new StringArrayAdapter(myDataArray);
-        ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(
-                this,
-                android.R.layout.simple_list_item_1,
-                myDataArray
-        );
+        StringArrayAdapter Adapter = new StringArrayAdapter(myDataArray);
+
+
 
         //TODO: Refactor for RecyclerView
         //Get a reference to the view using findViewById
-        RecyclerView myListView = (RecyclerView) findViewById(R.id.recycler);
+        RecyclerView myRecyclerView = (RecyclerView) findViewById(R.id.recycler);
+        myRecyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false));
 
         //TODO: Refactor for RecyclerView
         //Attach the adapter using its setAdapter method
-        myListView.setAdapter(Adapter);
+        myRecyclerView.setAdapter(Adapter);
 
     }
 }

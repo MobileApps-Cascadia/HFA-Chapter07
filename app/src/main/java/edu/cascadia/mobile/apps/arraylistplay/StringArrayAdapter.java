@@ -29,10 +29,10 @@ public class StringArrayAdapter extends RecyclerView.Adapter<StringArrayAdapter.
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         //TODO: Inflate a new View with the checklist_item xml layout
-        TextView tv = (TextView) LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.activity_main_recyclerview, parent, false);
+        View view = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.checklist_item, parent, false);
         //TODO: Use your view to create and return a new ViewHolder
-        return new ViewHolder(tv); //Use your view instead of null
+        return new ViewHolder(view); //Use your view instead of null
     }
 
     @Override
